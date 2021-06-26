@@ -1,138 +1,70 @@
-# Yellowcake
+# Getting Started with Create React App
 
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![dependencies](https://img.shields.io/david/thriveweb/yellowcake)](https://img.shields.io/david/thriveweb/yellowcake)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-An opinionated starter project for creating lightning-fast websites with [Gatsby](https://gatsbyjs.org) v2 and [Netlify CMS](https://netlifycms.org) v2. Made by [Thrive Web Design on the Gold Coast, Australia](https://thriveweb.com.au)
+## Available Scripts
 
-- **[Gatsby](https://gatsbyjs.org)** static site generator
-- **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
+In the project directory, you can run:
 
-## See also
+### `npm start`
 
-[Netlify CMS Docs](https://www.netlifycms.org/docs/)  
-[Netlify CMS Repo](https://github.com/netlify/netlify-cms)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Get going
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriveweb/yellowcake&stack=cms)
+### `npm test`
 
-1.  Hit the **Deploy to Netlify** button. This will:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Clone the repo into your Github account
-- Create you a new project on Netlify, build & deploy
+### `npm run build`
 
-1.  Once your Netlify project has been created, check a couple of settings:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Enable **Identity**
-- Change **Registration Preferences** to **Invite Only**
-- Enable **Git Gateway**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1.  Invite users (probably yourself) to enable admin access
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Open the **Identity** tab and hit **Invite Users**
+### `npm run eject`
 
-## Show me the CMS!
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-The CMS lives at [\_\_YOUR_SITE_NAME\_\_.netlify.com/admin](https://__YOUR_SITE_NAME__.netlify.com/admin).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Developing
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-1.  Clone your repo to your local machine
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-1.  Install dependencies
+## Learn More
 
-`yarn` or `npm install`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-1.  Run the development server
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-`yarn start` or `npm run start`
+### Code Splitting
 
-If you are adding or editing content locally in the CMS, a couple of things to note:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-1.  Changes will be pushed to the remote repo.
+### Analyzing the Bundle Size
 
-1.  You will be prompted to enter your site's url, this is necessary for Netlify Identity to manage user login. This is stored in `localStorage`, so you might have to empty your browser cache if you are switching projects but remaining on `localhost:8000`.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Editing CMS fields
+### Making a Progressive Web App
 
-The Netlify CMS configuration is located in `public/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
+### Advanced Configuration
 
-## Uploadcare setup
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Uploadcare is our file upload system. It hosts the files for us and delivers them trough their CDN network.
-Each site you'll create need its own Uploadcare API key's. See below how to set this up
+### Deployment
 
-1. Create new project in Uploadcare and save API keys in project
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- Go to [Uploadcare.com](https://uploadcare.com/accounts/login/) and login
-- Once on the dashboard create a new project
-- Set the name and hit create
-- In the left menu click in API Keys and copy the public key
-- Now open your project and open the CMS congif.yml file
-- find the `media_library` settings and paste in the public key after `publicKey:`
-- Done!!
+### `npm run build` fails to minify
 
-For more details see the [Netlify CMS Docs](https://www.netlifycms.org/docs/uploadcare/)
-
-## Scheduled content
-
-Scheduled content allows you to schedule posts. Set the date / order field in a post to the feature.
-For the scheduled content to appear on the website we need to deploy our website daily.
-
-1. Setup a Netlify build hook
-
-- Go to https://app.netlify.com/sites/_YOUR_SITE_NAME/setings/deploys/#build-hooks
-- Hit build hook button in the build hooks section
-- Give it a name for example: "Automatic deploy Zapier"
-- Select branch, in most cases master will do.
-- Hit save and copy the generated url
-
-2. Zapier Setup
-
-- Go to [Zapier.com](https://zapier.com/) and login
-- Hit make a zap button in the right top corner
-- Search for Schedule in the search bar and select "Schedule by Zapier"
-- Check every day and hit continue
-- Select a time and make sure trigger on weekends is turned on
-- Double check your settings and hit continue
-- On the left hit add a step - and search for webhook by Zapier
-- Select post as action and continue
-- Past in the url of our recently generated webhook in the url field
-- Make sure "Payload Type" is set to form and hit continue
-- check settings and hit the test button
-- Check your Netlify site if there has been triggered a new deploy
-- If that worked hit finish
-- Give your zap a name, example: "Automatic deploy Yellowcake" and make sure your zap is turned on
-
-That's it, you'r now ready to use scheduled content!!
-
-## Mailchimp integration
-
-https://hooks.zapier.com/hooks/catch/2881617/ea5exg/
-
-- Go to [Zapier.com](https://zapier.com/) and login
-- Hit make a zap button in the right top corner
-- Search for webhook by Zapier and select catch hook and continue to next step
-- In most cases leave this field empty and continue
-- Copy the generated url
-- Now go to the [form settings](https://app.netlify.com/sites/yellowcake/settings/forms#outgoing-notifications) in you Netlify project
-- Find the form notifications section click the add notification button
-- Select the option `outgoing webhook`
-- Set the event to listen for
-- Paste in our recent generated url in the URL to notify field
-- Select your form and save settings
-- Open your website navigate to your form, fill it out and send the data
-- Go back to Zaper and see if your form data has come trough.
-- Hit continue and add a new step on the left side of the screen
-- Search for MailChimp and select add/update subscriber
-- Select MailChimp account or add one and hit the test button
-- if succeeded hit continue button
-- Select your MailChimp list and select the subscriber email address
-- Fill in other settings for your needs and continue
-- Hit send test to MailChimp button and hit finish if succeeded
-- Give your Zap a name and make sure your zap is turned on
-- Submit your form one last time and see if all data is coming trough to MailChimp
-- That's it!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
