@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography, Grid, Button, TextField } from '@material-ui/core';
-import GoogleApiWrapper from './Googlemap';
+import GoogleApiWrapper from './GoogleApiWrapper';
 
 const useStyles = makeStyles((theme) => ({
     main: {
