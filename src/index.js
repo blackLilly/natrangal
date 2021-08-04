@@ -1,17 +1,17 @@
 import React from 'react';
-import { hydrate, render } from "react-dom";
+import * as Snap from "react-snapshot";
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(
+  Snap.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
     , rootElement);
 } else {
-  render(
+  Snap.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>

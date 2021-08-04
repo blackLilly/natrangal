@@ -41,7 +41,7 @@ function Main() {
                             <div>
                                 <div style={{ margin: '2rem 0px' }}>
                                     <Typography variant="h1" className={classes.title}>
-                                        <strong style={{ fontFamily: 'fantasy', letterSpacing: '4px' }}> King nursery</strong>
+                                        <strong style={{ fontFamily: 'Roboto', letterSpacing: '4px' }}> King nursery</strong>
                                     </Typography>
                                     <Typography variant="h1" className={classes.title}>
                                         <br />

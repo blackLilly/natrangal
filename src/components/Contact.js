@@ -85,7 +85,7 @@ export default function Contact() {
             <div className={classes.toolbar}></div>
             <div className={classes.head}>
                 <Typography variant="h1" className={classes.title}>
-                    <strong style={{ fontFamily: 'fantasy', letterSpacing: '2px' }}>
+                    <strong style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}>
                         Contact
                     </strong>
                 </Typography>

@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import Home from './pages/Home';
+import Contact from './components/Contact';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,7 @@ function App() {
           <Suspense fallback={<div></div>}>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/contact" component={Contact} />
             </Switch>
           </Suspense>
         </div>

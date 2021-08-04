@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     },
     map: {
         width: 'auto',
-        height: '30vh',
+        height: '20vh',
     }
 }));
 
@@ -83,9 +83,7 @@ export default function Footer() {
     const classes = useStyles();
     return (
         <>
-            <div className={classes.map}>
-                <GoogleApiWrapper className={classes.map} />
-            </div>
+            <GoogleApiWrapper />
             <Container maxWidth="xl" >
                 <div className={classes.toolbar}></div>
                 <div >
@@ -94,6 +92,11 @@ export default function Footer() {
                             <Typography>Get connceted with us on social networks !</Typography>
                         </Grid>
                         <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
+                            <Grid>
+                                <Grid></Grid>
+                                <Grid></Grid>
+                                <Grid></Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </div>
